@@ -10,9 +10,8 @@ html {
     grid-template-rows: 1fr  ;
 }
 
-
 .Name {
-    grid-column: 1/4;
+    grid-column: 2/3;
     grid-row: 1;
     text-align: center;
 }
@@ -24,24 +23,40 @@ html {
     font-size: 20px;
 }
 
-.Photo {
-   margin-top: 25px;
+.Title h1 {
+    margin: 0;
+}
 
+
+.Photo .RightStrengths {
+    visibility: hidden;
+}
+
+.Photo .LeftStrengths {
+    visibility: hidden;
 }
 
 /* Menu */
-.Menu {
+/* .Menu {
     text-align: center;
     grid-column: 1/4;
     grid-row: 2;
     padding: 0;
     margin-top: 4em;
+} */
+
+.Links {
+    grid-row: 2;
+}
+.Links a {
+    text-decoration: none;
+    color: black;
 }
 
 ul li{
     display: inline;
     font-size: 1.17em;;
-  }
+}
 
 .fab {
     text-decoration: none;
@@ -50,17 +65,12 @@ ul li{
 }
 /* Header End ---------------------- */
 
-
-
-
-@media only screen and (min-width: 600px) {
+@media only screen and (min-width: 699px) {
     .Profile {
-      background-color: lightblue;
-      
+      display: block;
     }
 
     .Name {
-        background-color: green;
         display: grid;
         grid-template-columns: 1fr 1fr 1fr;
         grid-template-rows: 1fr 2fr;
@@ -69,20 +79,15 @@ ul li{
 
     /* Calling Card (Name, Title, and Social Media Icons) */
     .Title {
-        background-color: orange;
         grid-column: 1;
         grid-row: 1;
-        display: flex;
-        flex-flow: wrap; 
     }
     
     /* John Lombard in the top corner */
     .Title h1 {
         font-size: 1.5em;
+        text-align: left;
     }
-
-   
-
 
     /* Position and social Media Icons Start--- */
     .Title .Social {
@@ -94,17 +99,36 @@ ul li{
 
      /* Social Media Buttons Start000 */
      .Title .Social .Icons {
-
-} 
-
+        margin-left: 0.5em
+    } 
      .Title .Social .Icons .fab {
         font-size: 0.9em;
-      }
+    }
+
+    .Links {
+        grid-column: 3/4;
+        grid-row: 1;
+    }
+    
+
     /* Social Media Buttons End000 */
     /* Position and social Media Icons End--- */
 
-
-
-
-
+    /* Photo of myself */
+    .Photo { 
+        grid-column: 2/3;
+        grid-row: 2;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 1fr ;
+     }
+     .Photo .LeftStrengths {
+        visibility: visible;
+        transform: rotate(270deg);
+    }
+    
+     .Photo .RightStrengths {
+        visibility: visible;
+        transform: rotate(90deg);
+    }
   }
