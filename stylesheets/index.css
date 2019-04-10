@@ -1,0 +1,110 @@
+
+html {
+    font-family: 'Source Code Pro', monospace;    
+}
+
+/* Header Start--------------------------------- */
+.Profile {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr  ;
+}
+
+
+.Name {
+    grid-column: 1/4;
+    grid-row: 1;
+    text-align: center;
+}
+
+/* Calling Card (Name, Title, and Social Media Icons) */
+.Title {
+    align-items: start;
+    text-align: center;
+    font-size: 20px;
+}
+
+.Photo {
+   margin-top: 25px;
+
+}
+
+/* Menu */
+.Menu {
+    text-align: center;
+    grid-column: 1/4;
+    grid-row: 2;
+    padding: 0;
+    margin-top: 4em;
+}
+
+ul li{
+    display: inline;
+    font-size: 1.17em;;
+  }
+
+.fab {
+    text-decoration: none;
+    color: black;
+    font-size: 25px;
+}
+/* Header End ---------------------- */
+
+
+
+
+@media only screen and (min-width: 600px) {
+    .Profile {
+      background-color: lightblue;
+      
+    }
+
+    .Name {
+        background-color: green;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 1fr 2fr;
+        text-align: center;
+    }
+
+    /* Calling Card (Name, Title, and Social Media Icons) */
+    .Title {
+        background-color: orange;
+        grid-column: 1;
+        grid-row: 1;
+        display: flex;
+        flex-flow: wrap; 
+    }
+    
+    /* John Lombard in the top corner */
+    .Title h1 {
+        font-size: 1.5em;
+    }
+
+   
+
+
+    /* Position and social Media Icons Start--- */
+    .Title .Social {
+       display: flex;
+       flex-flow: nowrap;
+       align-items: center;
+       font-size: .8em;
+    }
+
+     /* Social Media Buttons Start000 */
+     .Title .Social .Icons {
+
+} 
+
+     .Title .Social .Icons .fab {
+        font-size: 0.9em;
+      }
+    /* Social Media Buttons End000 */
+    /* Position and social Media Icons End--- */
+
+
+
+
+
+  }
